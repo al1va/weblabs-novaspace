@@ -13,8 +13,20 @@
 
     <header>
       <a href="/" aria-label="Nova Space — на головну">
-        <img src="assets/icons/logo.svg" alt="Nova Space" width="40" height="48">
-        <span>Nova Space</span>
+        <img src="assets/icons/logo.svg" alt="" width="40" height="48">
+        <picture>
+          <source
+            media="(prefers-color-scheme: light)"
+            srcset="assets/icons/logo_text_white.svg"
+          >
+          <!--- Заглушка для темної/світлої теми-->
+          <img
+            src="assets/icons/logo_text_black.svg"
+            alt=""
+            width="180"
+            height="18"
+          >
+        </picture>
       </a>
 
       <nav aria-label="Головна навігація">
@@ -35,7 +47,6 @@
     <main id="main-content">
       <section aria-labelledby="hero-title">
         <article>
-          <p>Архітектура та дизайн</p>
           <h1 id="hero-title">Простір, у якому хочеться жити</h1>
           <p>
             Створюємо продумані інтер'єри та архітектуру, що відображають
@@ -97,9 +108,9 @@
 
       <section id="portfolio" aria-labelledby="portfolio-title">
         <header>
-          <p>Наші роботи</p>
+  
           <h2 id="portfolio-title">Проєкти, якими ми пишаємося</h2>
-          <a href="#all-projects">Дивитися всі проєкти</a>
+          <a href="#all-projects">Дивитися проєкти</a>
         </header>
 
         <ul id="all-projects">
@@ -155,7 +166,7 @@
             <article>
               <h3>Архітектурне проєктування</h3>
               <p>Створюємо архітектурні рішення від концепції до реалізації.</p>
-              <a href="#contact">Замовити послугу</a>
+              
             </article>
           </li>
 
@@ -163,7 +174,7 @@
             <article>
               <h3>Дизайн інтер'єру</h3>
               <p>Проєктуємо функціональні та виразні інтер'єри для життя і роботи.</p>
-              <a href="#contact">Замовити послугу</a>
+             
             </article>
           </li>
 
@@ -171,7 +182,31 @@
             <article>
               <h3>Авторський нагляд</h3>
               <p>Супроводжуємо будівництво, щоб задум залишався незмінним.</p>
-              <a href="#contact">Замовити послугу</a>
+              
+            </article>
+          </li>
+
+          <li>
+            <article>
+              <h3>Ландшафтний дизайн</h3>
+              <p>Проєктуємо зовнішні простори, що продовжують архітектуру.</p>
+              
+            </article>
+          </li>
+
+          <li>
+            <article>
+              <h3>Комплектація проєкту</h3>
+              <p>Підбираємо матеріали, меблі та освітлення під єдину концепцію.</p>
+              
+            </article>
+          </li>
+
+          <li>
+            <article>
+              <h3>Реконструкція</h3>
+              <p>Оновлюємо наявні простори, зберігаючи їхню цінність і характер.</p>
+              
             </article>
           </li>
         </ul>
@@ -312,7 +347,18 @@
 
         <a href="/" aria-label="Nova Space — на головну">
           <img src="assets/icons/logo.svg" alt="" width="32" height="38">
-          <span>Nova Space</span>
+          <picture>
+            <source
+              media="(prefers-color-scheme: dark)"
+              srcset="assets/icons/logo_text_white.svg"
+            >
+            <img
+              src="assets/icons/logo_text_black.svg"
+              alt=""
+              width="140"
+              height="14"
+            >
+          </picture>
         </a>
 
         <p>Архітектура, що має значення.</p>
