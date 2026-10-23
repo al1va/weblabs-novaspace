@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Nova Space — портфоліо архітектурного бюро та дизайн просторів.">
     <title>Nova Space — архітектурне бюро</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
+  <body class="bg-[#f2f2f2] font-['Inter','Segoe_UI',sans-serif] leading-relaxed text-[#1b1f1f]">
     <!-- Skip-link забезпечує швидкий доступ клавіатурою до головного вмісту. -->
-    <a href="#main-content">Перейти до основного вмісту</a>
+    <a class="fixed left-3 top-3 z-10 -translate-y-20 bg-[#1b1f1f] px-3 py-2 text-white transition-transform focus:translate-y-0 focus:outline-none focus:ring-4 focus:ring-[#e8a13a] focus:ring-offset-2" href="#main-content">Перейти до основного вмісту</a>
 
-    <header>
-      <a href="/" aria-label="Nova Space — на головну">
+    <header class="mx-auto flex w-[calc(100%-2rem)] max-w-6xl flex-wrap items-center justify-between gap-4 py-4 md:gap-8 lg:min-h-[5.5rem] lg:flex-nowrap">
+      <a class="flex shrink-0 items-center gap-3 font-['Montserrat','Arial',sans-serif] font-bold text-[#211e1e] transition-colors hover:text-[#2e8b8b] focus:outline-none focus:ring-4 focus:ring-[#e8a13a]" href="/" aria-label="Nova Space — на головну">
         <img src="assets/icons/logo.svg" alt="" width="40" height="48">
         <picture>
           <source
@@ -29,125 +30,126 @@
         </picture>
       </a>
 
-      <nav aria-label="Головна навігація">
-        <ul>
-          <li><a href="#about">Про нас</a></li>
-          <li><a href="#portfolio">Проєкти</a></li>
-          <li><a href="#services">Послуги</a></li>
-          <li><a href="#process">Процес</a></li>
-          <li><a href="#blog">Блог</a></li>
+      <nav class="order-3 w-full lg:order-none lg:flex-1" aria-label="Головна навігація">
+        <ul class="flex flex-wrap items-center justify-center gap-4 md:gap-8">
+          <li><a class="transition-colors hover:text-[#2e8b8b] focus:outline-none focus:ring-4 focus:ring-[#e8a13a]" href="#about">Про нас</a></li>
+          <li><a class="transition-colors hover:text-[#2e8b8b] focus:outline-none focus:ring-4 focus:ring-[#e8a13a]" href="#portfolio">Проєкти</a></li>
+          <li><a class="transition-colors hover:text-[#2e8b8b] focus:outline-none focus:ring-4 focus:ring-[#e8a13a]" href="#services">Послуги</a></li>
+          <li><a class="transition-colors hover:text-[#2e8b8b] focus:outline-none focus:ring-4 focus:ring-[#e8a13a]" href="#process">Процес</a></li>
+          <li><a class="transition-colors hover:text-[#2e8b8b] focus:outline-none focus:ring-4 focus:ring-[#e8a13a]" href="#blog">Блог</a></li>
         </ul>
       </nav>
 
-      <aside aria-label="Основний заклик до дії">
-        <a href="#contact">Почати проєкт</a>
+      <aside class="w-full sm:w-auto" aria-label="Основний заклик до дії">
+        <a class="block w-full rounded-full bg-[#2e8b8b] px-5 py-3 text-center font-bold text-white transition-colors hover:bg-[#1b1f1f] focus:outline-none focus:ring-4 focus:ring-[#e8a13a] sm:w-auto" href="#contact">Почати проєкт</a>
       </aside>
     </header>
 
     <main id="main-content">
-      <section aria-labelledby="hero-title">
-        <article>
-          <h1 id="hero-title">Простір, у якому хочеться жити</h1>
-          <p>
+      <section class="mx-auto grid w-[calc(100%-2rem)] max-w-6xl items-center gap-8 py-16 text-center md:py-24 lg:grid-cols-2 lg:gap-12 lg:py-32 lg:text-left" aria-labelledby="hero-title">
+        <article class="flex flex-col items-center lg:items-start">
+          <h1 class="font-['Montserrat','Arial',sans-serif] text-5xl font-bold leading-none tracking-tight text-[#211e1e] md:text-7xl lg:text-8xl" id="hero-title">Простір, у якому хочеться жити</h1>
+          <p class="mt-6 max-w-xl text-lg text-[#4d5151] md:text-xl">
             Створюємо продумані інтер'єри та архітектуру, що відображають
             характер людей і брендів.
           </p>
 
-          <nav aria-label="Дії у вступному блоці">
-            <a href="#contact">Обговорити проєкт</a>
-            <a href="#portfolio">Переглянути портфоліо</a>
+          <nav class="mt-8 flex flex-wrap justify-center gap-4 lg:justify-start" aria-label="Дії у вступному блоці">
+            <a class="rounded-full bg-[#2e8b8b] px-5 py-3 font-bold text-white transition-colors hover:bg-[#1b1f1f] focus:outline-none focus:ring-4 focus:ring-[#e8a13a]" href="#contact">Обговорити проєкт</a>
+            <a class="rounded-full border border-[#b3b4b4] px-5 py-3 transition-colors hover:border-[#2e8b8b] hover:text-[#2e8b8b] focus:outline-none focus:ring-4 focus:ring-[#e8a13a]" href="#portfolio">Переглянути портфоліо</a>
           </nav>
         </article>
 
-        <aside aria-label="Приклад архітектурного простору">
+        <aside class="w-full min-h-[28rem] overflow-hidden rounded-md bg-[#24201c]" aria-label="Приклад архітектурного простору">
           <img
+            class="h-full min-h-[28rem] w-full object-cover transition-transform duration-500 hover:scale-[1.02]"
             src="assets/images/hero.png"
             alt="Сучасний архітектурний простір із природним освітленням"
           >
         </aside>
       </section>
 
-      <section aria-labelledby="brands-title">
+      <section class="w-full max-w-none bg-[#1b1f1f] px-4 py-8 text-white md:px-8" aria-labelledby="brands-title">
         <header>
-          <h2 id="brands-title">Нам довіряють</h2>
+          <h2 class="font-['Montserrat','Arial',sans-serif] text-2xl font-bold text-white md:text-4xl" id="brands-title">Нам довіряють</h2>
         </header>
 
         <!-- Список коректно передає групу назв партнерів для скринрідера. -->
-        <ul aria-label="Партнери та клієнти">
-          <li>Brand One</li>
-          <li>Brand Two</li>
-          <li>Brand Three</li>
-          <li>Brand Four</li>
+        <ul class="grid grid-cols-2 gap-4 font-['Montserrat','Arial',sans-serif] text-lg font-bold text-[#b3b4b4] md:grid-cols-4 md:text-2xl" aria-label="Партнери та клієнти">
+          <li class="transition-colors hover:text-white">Brand One</li>
+          <li class="transition-colors hover:text-white">Brand Two</li>
+          <li class="transition-colors hover:text-white">Brand Three</li>
+          <li class="transition-colors hover:text-white">Brand Four</li>
         </ul>
       </section>
 
-      <section id="about" aria-labelledby="about-title">
+      <section class="mx-auto grid w-[calc(100%-2rem)] max-w-6xl gap-8 py-16 md:py-24 lg:grid-cols-[1.4fr_1fr] lg:gap-32" id="about" aria-labelledby="about-title">
         <article>
-          <p>Про бюро</p>
-          <h2 id="about-title">Ми створюємо більше, ніж красиві інтер'єри</h2>
-          <p>
+          <p class="mb-3 font-mono text-xs font-bold uppercase tracking-widest text-[#2e8b8b]">Про бюро</p>
+          <h2 class="font-['Montserrat','Arial',sans-serif] text-4xl font-bold leading-tight tracking-tight text-[#211e1e] md:text-6xl" id="about-title">Ми створюємо більше, ніж красиві інтер'єри</h2>
+          <p class="my-6 max-w-2xl text-lg text-[#4d5151]">
             Nova Space — команда архітекторів і дизайнерів, яка поєднує
             естетику, функціональність і увагу до деталей.
           </p>
-          <a href="#contact">Дізнатися більше про нас</a>
+          <a class="inline-block rounded-full bg-[#2e8b8b] px-5 py-3 font-bold text-white transition-colors hover:bg-[#1b1f1f] focus:outline-none focus:ring-4 focus:ring-[#e8a13a]" href="#contact">Дізнатися більше про нас</a>
         </article>
 
         <aside aria-label="Статистика бюро">
-          <dl>
-            <dt>10+</dt>
-            <dd>років досвіду</dd>
+          <dl class="grid grid-cols-3 gap-4 self-center">
+            <dt class="font-['Montserrat','Arial',sans-serif] text-4xl font-bold text-[#b85c72] md:text-6xl">10+</dt>
+            <dd class="text-sm text-[#4d5151]">років досвіду</dd>
 
-            <dt>120</dt>
-            <dd>завершених проєктів</dd>
+            <dt class="font-['Montserrat','Arial',sans-serif] text-4xl font-bold text-[#b85c72] md:text-6xl">120</dt>
+            <dd class="text-sm text-[#4d5151]">завершених проєктів</dd>
 
-            <dt>8</dt>
-            <dd>країн, де ми працюємо</dd>
+            <dt class="font-['Montserrat','Arial',sans-serif] text-4xl font-bold text-[#b85c72] md:text-6xl">8</dt>
+            <dd class="text-sm text-[#4d5151]">країн, де ми працюємо</dd>
           </dl>
         </aside>
       </section>
 
-      <section id="portfolio" aria-labelledby="portfolio-title">
-        <header>
+      <section class="mx-auto w-[calc(100%-2rem)] max-w-6xl py-16 md:py-24" id="portfolio" aria-labelledby="portfolio-title">
+        <header class="mb-10 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
   
-          <h2 id="portfolio-title">Проєкти, якими ми пишаємося</h2>
-          <a href="#all-projects">Дивитися проєкти</a>
+          <h2 class="font-['Montserrat','Arial',sans-serif] text-4xl font-bold leading-tight tracking-tight text-[#211e1e] md:text-6xl" id="portfolio-title">Проєкти, якими ми пишаємося</h2>
+          <a class="shrink-0 rounded-full bg-[#2e8b8b] px-5 py-3 font-bold text-white transition-colors hover:bg-[#1b1f1f] focus:outline-none focus:ring-4 focus:ring-[#e8a13a]" href="#all-projects">Дивитися проєкти</a>
         </header>
 
-        <ul id="all-projects">
+        <ul class="grid gap-6 md:grid-cols-2 lg:grid-cols-3" id="all-projects">
           <li>
-            <article>
-              <figure>
-                <aside aria-label="Зображення проєкту приватного будинку"></aside>
-                <figcaption>
-                  <p>Житлова архітектура</p>
-                  <h3>Будинок на схилі</h3>
-                  <a href="#project-hillside">Переглянути проєкт</a>
+            <article class="h-full rounded-md bg-white p-6 shadow-[0_1rem_2.5rem_rgb(27_31_31_/_10%)] transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+              <figure class="flex h-full flex-col">
+                <aside class="mb-6 -mx-6 -mt-6 min-h-56 bg-gradient-to-br from-[#2e8b8b] to-[#b85c72]" aria-label="Зображення проєкту приватного будинку"></aside>
+                <figcaption class="flex flex-1 flex-col items-start gap-3">
+                  <p class="font-mono text-xs uppercase tracking-widest text-[#2e8b8b]">Житлова архітектура</p>
+                  <h3 class="font-['Montserrat','Arial',sans-serif] text-2xl font-bold">Будинок на схилі</h3>
+                  <a class="mt-auto font-bold text-[#2e8b8b] underline underline-offset-4 hover:text-[#1b1f1f]" href="#project-hillside">Переглянути проєкт</a>
                 </figcaption>
               </figure>
             </article>
           </li>
 
           <li>
-            <article>
-              <figure>
-                <aside aria-label="Зображення проєкту сучасної квартири"></aside>
-                <figcaption>
-                  <p>Інтер'єр квартири</p>
-                  <h3>Квартира в центрі</h3>
-                  <a href="#project-apartment">Переглянути проєкт</a>
+            <article class="h-full rounded-md bg-white p-6 shadow-[0_1rem_2.5rem_rgb(27_31_31_/_10%)] transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+              <figure class="flex h-full flex-col">
+                <aside class="mb-6 -mx-6 -mt-6 min-h-56 bg-gradient-to-br from-[#e8a13a] to-[#24201c]" aria-label="Зображення проєкту сучасної квартири"></aside>
+                <figcaption class="flex flex-1 flex-col items-start gap-3">
+                  <p class="font-mono text-xs uppercase tracking-widest text-[#2e8b8b]">Інтер'єр квартири</p>
+                  <h3 class="font-['Montserrat','Arial',sans-serif] text-2xl font-bold">Квартира в центрі</h3>
+                  <a class="mt-auto font-bold text-[#2e8b8b] underline underline-offset-4 hover:text-[#1b1f1f]" href="#project-apartment">Переглянути проєкт</a>
                 </figcaption>
               </figure>
             </article>
           </li>
 
           <li>
-            <article>
-              <figure>
-                <aside aria-label="Зображення проєкту офісного простору"></aside>
-                <figcaption>
-                  <p>Комерційний простір</p>
-                  <h3>Офіс для команди</h3>
-                  <a href="#project-office">Переглянути проєкт</a>
+            <article class="h-full rounded-md bg-white p-6 shadow-[0_1rem_2.5rem_rgb(27_31_31_/_10%)] transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+              <figure class="flex h-full flex-col">
+                <aside class="mb-6 -mx-6 -mt-6 min-h-56 bg-gradient-to-br from-[#1b1f1f] to-[#2e8b8b]" aria-label="Зображення проєкту офісного простору"></aside>
+                <figcaption class="flex flex-1 flex-col items-start gap-3">
+                  <p class="font-mono text-xs uppercase tracking-widest text-[#2e8b8b]">Комерційний простір</p>
+                  <h3 class="font-['Montserrat','Arial',sans-serif] text-2xl font-bold">Офіс для команди</h3>
+                  <a class="mt-auto font-bold text-[#2e8b8b] underline underline-offset-4 hover:text-[#1b1f1f]" href="#project-office">Переглянути проєкт</a>
                 </figcaption>
               </figure>
             </article>
@@ -155,98 +157,98 @@
         </ul>
       </section>
 
-      <section id="services" aria-labelledby="services-title">
-        <header>
-          <p>Що ми робимо</p>
-          <h2 id="services-title">Послуги для вашого простору</h2>
+      <section class="mx-auto w-[calc(100%-2rem)] max-w-6xl py-16 md:py-24" id="services" aria-labelledby="services-title">
+        <header class="mb-10 flex flex-col items-start gap-3">
+          <p class="font-mono text-xs font-bold uppercase tracking-widest text-[#2e8b8b]">Що ми робимо</p>
+          <h2 class="font-['Montserrat','Arial',sans-serif] text-4xl font-bold leading-tight tracking-tight text-[#211e1e] md:text-6xl" id="services-title">Послуги для вашого простору</h2>
         </header>
 
-        <ul>
+        <ul class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           <li>
-            <article>
-              <h3>Архітектурне проєктування</h3>
-              <p>Створюємо архітектурні рішення від концепції до реалізації.</p>
+            <article class="h-full rounded-md bg-white p-6 shadow-[0_1rem_2.5rem_rgb(27_31_31_/_10%)] transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+              <h3 class="font-['Montserrat','Arial',sans-serif] text-2xl font-bold">Архітектурне проєктування</h3>
+              <p class="mt-4 text-[#4d5151]">Створюємо архітектурні рішення від концепції до реалізації.</p>
               
             </article>
           </li>
 
           <li>
-            <article>
-              <h3>Дизайн інтер'єру</h3>
-              <p>Проєктуємо функціональні та виразні інтер'єри для життя і роботи.</p>
+            <article class="h-full rounded-md bg-white p-6 shadow-[0_1rem_2.5rem_rgb(27_31_31_/_10%)] transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+              <h3 class="font-['Montserrat','Arial',sans-serif] text-2xl font-bold">Дизайн інтер'єру</h3>
+              <p class="mt-4 text-[#4d5151]">Проєктуємо функціональні та виразні інтер'єри для життя і роботи.</p>
              
             </article>
           </li>
 
           <li>
-            <article>
-              <h3>Авторський нагляд</h3>
-              <p>Супроводжуємо будівництво, щоб задум залишався незмінним.</p>
+            <article class="h-full rounded-md bg-white p-6 shadow-[0_1rem_2.5rem_rgb(27_31_31_/_10%)] transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+              <h3 class="font-['Montserrat','Arial',sans-serif] text-2xl font-bold">Авторський нагляд</h3>
+              <p class="mt-4 text-[#4d5151]">Супроводжуємо будівництво, щоб задум залишався незмінним.</p>
               
             </article>
           </li>
 
           <li>
-            <article>
-              <h3>Ландшафтний дизайн</h3>
-              <p>Проєктуємо зовнішні простори, що продовжують архітектуру.</p>
+            <article class="h-full rounded-md bg-white p-6 shadow-[0_1rem_2.5rem_rgb(27_31_31_/_10%)] transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+              <h3 class="font-['Montserrat','Arial',sans-serif] text-2xl font-bold">Ландшафтний дизайн</h3>
+              <p class="mt-4 text-[#4d5151]">Проєктуємо зовнішні простори, що продовжують архітектуру.</p>
               
             </article>
           </li>
 
           <li>
-            <article>
-              <h3>Комплектація проєкту</h3>
-              <p>Підбираємо матеріали, меблі та освітлення під єдину концепцію.</p>
+            <article class="h-full rounded-md bg-white p-6 shadow-[0_1rem_2.5rem_rgb(27_31_31_/_10%)] transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+              <h3 class="font-['Montserrat','Arial',sans-serif] text-2xl font-bold">Комплектація проєкту</h3>
+              <p class="mt-4 text-[#4d5151]">Підбираємо матеріали, меблі та освітлення під єдину концепцію.</p>
               
             </article>
           </li>
 
           <li>
-            <article>
-              <h3>Реконструкція</h3>
-              <p>Оновлюємо наявні простори, зберігаючи їхню цінність і характер.</p>
+            <article class="h-full rounded-md bg-white p-6 shadow-[0_1rem_2.5rem_rgb(27_31_31_/_10%)] transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+              <h3 class="font-['Montserrat','Arial',sans-serif] text-2xl font-bold">Реконструкція</h3>
+              <p class="mt-4 text-[#4d5151]">Оновлюємо наявні простори, зберігаючи їхню цінність і характер.</p>
               
             </article>
           </li>
         </ul>
       </section>
 
-      <section id="process" aria-labelledby="process-title">
-        <header>
-          <p>Як ми працюємо</p>
-          <h2 id="process-title">Від ідеї до готового простору</h2>
+      <section class="mx-auto w-[calc(100%-2rem)] max-w-6xl py-16 md:py-24" id="process" aria-labelledby="process-title">
+        <header class="mb-10 flex flex-col items-start gap-3">
+          <p class="font-mono text-xs font-bold uppercase tracking-widest text-[#2e8b8b]">Як ми працюємо</p>
+          <h2 class="font-['Montserrat','Arial',sans-serif] text-4xl font-bold leading-tight tracking-tight text-[#211e1e] md:text-6xl" id="process-title">Від ідеї до готового простору</h2>
         </header>
 
-        <ol>
-          <li>
-            <h3>Знайомство</h3>
-            <p>Обговорюємо ваші цілі, побажання та бюджет.</p>
+        <ol class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          <li class="border-t-2 border-[#2e8b8b] p-6">
+            <h3 class="font-['Montserrat','Arial',sans-serif] text-2xl font-bold">Знайомство</h3>
+            <p class="mt-3 text-[#4d5151]">Обговорюємо ваші цілі, побажання та бюджет.</p>
           </li>
-          <li>
-            <h3>Концепція</h3>
-            <p>Формуємо напрям і розробляємо перші рішення.</p>
+          <li class="border-t-2 border-[#2e8b8b] p-6">
+            <h3 class="font-['Montserrat','Arial',sans-serif] text-2xl font-bold">Концепція</h3>
+            <p class="mt-3 text-[#4d5151]">Формуємо напрям і розробляємо перші рішення.</p>
           </li>
-          <li>
-            <h3>Проєктування</h3>
-            <p>Готуємо детальну документацію для реалізації.</p>
+          <li class="border-t-2 border-[#2e8b8b] p-6">
+            <h3 class="font-['Montserrat','Arial',sans-serif] text-2xl font-bold">Проєктування</h3>
+            <p class="mt-3 text-[#4d5151]">Готуємо детальну документацію для реалізації.</p>
           </li>
-          <li>
-            <h3>Реалізація</h3>
-            <p>Супроводжуємо проєкт до його повного завершення.</p>
+          <li class="border-t-2 border-[#2e8b8b] p-6">
+            <h3 class="font-['Montserrat','Arial',sans-serif] text-2xl font-bold">Реалізація</h3>
+            <p class="mt-3 text-[#4d5151]">Супроводжуємо проєкт до його повного завершення.</p>
           </li>
         </ol>
 
-        <aside aria-labelledby="calculator-title">
-          <h3 id="calculator-title">Розрахувати орієнтовну вартість</h3>
+        <aside class="mt-16 max-w-2xl rounded-md bg-[#24201c] p-6 md:p-12" aria-labelledby="calculator-title">
+          <h3 class="font-['Montserrat','Arial',sans-serif] text-2xl font-bold text-white" id="calculator-title">Розрахувати орієнтовну вартість</h3>
 
-          <form action="#" method="get">
-            <fieldset>
-              <legend>Параметри проєкту</legend>
+          <form class="mt-6" action="#" method="get">
+            <fieldset class="grid gap-4 md:grid-cols-2">
+              <legend class="mb-2 font-bold text-white md:col-span-2">Параметри проєкту</legend>
 
               <p>
-                <label for="project-type">Тип проєкту</label>
-                <select id="project-type" name="project-type">
+                <label class="text-white" for="project-type">Тип проєкту</label>
+                <select class="mt-1 min-h-11 w-full rounded-sm border border-[#b3b4b4] bg-white px-3 text-[#1b1f1f] focus:outline-none focus:ring-4 focus:ring-[#e8a13a]" id="project-type" name="project-type">
                   <option value="interior">Дизайн інтер'єру</option>
                   <option value="architecture">Архітектура</option>
                   <option value="commercial">Комерційний простір</option>
@@ -254,8 +256,9 @@
               </p>
 
               <p>
-                <label for="project-area">Площа, м²</label>
+                <label class="text-white" for="project-area">Площа, м²</label>
                 <input
+                  class="mt-1 min-h-11 w-full rounded-sm border border-[#b3b4b4] bg-white px-3 text-[#1b1f1f] focus:outline-none focus:ring-4 focus:ring-[#e8a13a]"
                   id="project-area"
                   name="project-area"
                   type="number"
@@ -265,58 +268,60 @@
               </p>
             </fieldset>
 
-            <button type="submit">Розрахувати вартість</button>
+            <button class="mt-6 rounded-full bg-[#e8a13a] px-5 py-3 font-bold text-[#1b1f1f] transition-colors hover:bg-white focus:outline-none focus:ring-4 focus:ring-[#e8a13a]" type="submit">Розрахувати вартість</button>
 
-            <output name="estimated-price" aria-live="polite">
+            <output class="mt-4 block text-white" name="estimated-price" aria-live="polite">
               Вартість буде розрахована після заповнення форми.
             </output>
           </form>
         </aside>
       </section>
 
-      <section id="blog" aria-labelledby="blog-title">
-        <header>
-          <p>Журнал Nova Space</p>
-          <h2 id="blog-title">Ідеї та знання для вашого простору</h2>
-          <a href="#all-articles">Читати всі статті</a>
+      <section class="mx-auto w-[calc(100%-2rem)] max-w-6xl py-16 md:py-24" id="blog" aria-labelledby="blog-title">
+        <header class="mb-10 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
+          <div>
+            <p class="mb-3 font-mono text-xs font-bold uppercase tracking-widest text-[#2e8b8b]">Журнал Nova Space</p>
+            <h2 class="font-['Montserrat','Arial',sans-serif] text-4xl font-bold leading-tight tracking-tight text-[#211e1e] md:text-6xl" id="blog-title">Ідеї та знання для вашого простору</h2>
+          </div>
+          <a class="shrink-0 font-bold text-[#fff] underline underline-offset-4 hover:text-[#fff]" href="#all-articles">Читати всі статті</a>
         </header>
 
-        <ul id="all-articles">
+        <ul class="grid gap-6 md:grid-cols-3" id="all-articles">
           <li>
-            <article>
-              <p><time datetime="2026-01-15">15.01.2026</time></p>
-              <h3>
-                <a href="#article-light">
+            <article class="flex h-full flex-col gap-4 rounded-md bg-white p-6 shadow-[0_1rem_2.5rem_rgb(27_31_31_/_10%)] transition duration-300 hover:-translate-y-1">
+              <p class="font-mono text-sm text-[#b85c72]"><time datetime="2026-01-15">15.01.2026</time></p>
+              <h3 class="font-['Montserrat','Arial',sans-serif] text-2xl font-bold">
+                <a class="hover:text-[#2e8b8b]" href="#article-light">
                   Як світло змінює сприйняття інтер'єру
                 </a>
               </h3>
-              <p>
+              <p class="text-[#4d5151]">
                 Практичні принципи роботи з природним і штучним освітленням.
               </p>
             </article>
           </li>
 
           <li>
-            <article>
-              <p><time datetime="2025-12-10">10.12.2025</time></p>
-              <h3>
-                <a href="#article-materials">
+            <article class="flex h-full flex-col gap-4 rounded-md bg-white p-6 shadow-[0_1rem_2.5rem_rgb(27_31_31_/_10%)] transition duration-300 hover:-translate-y-1">
+              <p class="font-mono text-sm text-[#b85c72]"><time datetime="2025-12-10">10.12.2025</time></p>
+              <h3 class="font-['Montserrat','Arial',sans-serif] text-2xl font-bold">
+                <a class="hover:text-[#2e8b8b]" href="#article-materials">
                   Матеріали, які залишаються актуальними
                 </a>
               </h3>
-              <p>Як обирати оздоблення, що служитиме роками.</p>
+              <p class="text-[#4d5151]">Як обирати оздоблення, що служитиме роками.</p>
             </article>
           </li>
 
           <li>
-            <article>
-              <p><time datetime="2025-11-03">03.11.2025</time></p>
-              <h3>
-                <a href="#article-process">
+            <article class="flex h-full flex-col gap-4 rounded-md bg-white p-6 shadow-[0_1rem_2.5rem_rgb(27_31_31_/_10%)] transition duration-300 hover:-translate-y-1">
+              <p class="font-mono text-sm text-[#b85c72]"><time datetime="2025-11-03">03.11.2025</time></p>
+              <h3 class="font-['Montserrat','Arial',sans-serif] text-2xl font-bold">
+                <a class="hover:text-[#2e8b8b]" href="#article-process">
                   Що потрібно знати перед стартом ремонту
                 </a>
               </h3>
-              <p>
+              <p class="text-[#4d5151]">
                 Короткий гід з підготовки до роботи з дизайн-бюро.
               </p>
             </article>
@@ -324,16 +329,16 @@
         </ul>
       </section>
 
-      <section id="contact" aria-labelledby="contact-title">
+      <section class="w-full max-w-none bg-[#2e8b8b] px-4 py-16 text-white md:px-8 md:py-24" id="contact" aria-labelledby="contact-title">
         <article>
-          <p>Готові почати?</p>
-          <h2 id="contact-title">Розкажіть нам про свій проєкт</h2>
+          <p class="mb-3 font-mono text-xs font-bold uppercase tracking-widest">Готові почати?</p>
+          <h2 class="max-w-xl font-['Montserrat','Arial',sans-serif] text-4xl font-bold leading-tight text-white md:text-6xl" id="contact-title">Розкажіть нам про свій проєкт</h2>
 
-          <address>
-            <a href="mailto:hello@novaspace.example">
+          <address class="mt-8 flex flex-wrap gap-4 not-italic md:gap-8">
+            <a class="text-lg font-bold underline underline-offset-4 hover:text-[#1b1f1f]" href="mailto:hello@novaspace.example">
               hello@novaspace.example
             </a>
-            <a href="tel:+380000000000">
+            <a class="text-lg font-bold underline underline-offset-4 hover:text-[#1b1f1f]" href="tel:+380000000000">
               +38 (000) 000-00-00
             </a>
           </address>
@@ -341,15 +346,15 @@
       </section>
     </main>
 
-    <footer>
+    <footer class="mx-auto grid w-[calc(100%-2rem)] max-w-6xl gap-8 py-12 md:grid-cols-2 lg:grid-cols-4">
       <section aria-labelledby="footer-brand-title">
-        <h2 id="footer-brand-title">Nova Space</h2>
+
 
         <a href="/" aria-label="Nova Space — на головну">
           <img src="assets/icons/logo.svg" alt="" width="32" height="38">
           <picture>
             <source
-              media="(prefers-color-scheme: dark)"
+              media="(prefers-color-scheme: light)"
               srcset="assets/icons/logo_text_white.svg"
             >
             <img
@@ -361,37 +366,37 @@
           </picture>
         </a>
 
-        <p>Архітектура, що має значення.</p>
+        <p class="mt-4 text-[#4d5151]">Архітектура, що має значення.</p>
       </section>
 
       <nav aria-label="Навігація у футері">
-        <h2>Навігація</h2>
+        <h2 class="mb-4 font-['Montserrat','Arial',sans-serif] text-base font-bold">Навігація</h2>
 
-        <ul>
-          <li><a href="#about">Про нас</a></li>
-          <li><a href="#portfolio">Проєкти</a></li>
-          <li><a href="#services">Послуги</a></li>
-          <li><a href="#blog">Блог</a></li>
-          <li><a href="#contact">Контакти</a></li>
+        <ul class="grid gap-2 text-[#4d5151]">
+          <li><a class="hover:text-[#2e8b8b]" href="#about">Про нас</a></li>
+          <li><a class="hover:text-[#2e8b8b]" href="#portfolio">Проєкти</a></li>
+          <li><a class="hover:text-[#2e8b8b]" href="#services">Послуги</a></li>
+          <li><a class="hover:text-[#2e8b8b]" href="#blog">Блог</a></li>
+          <li><a class="hover:text-[#2e8b8b]" href="#contact">Контакти</a></li>
         </ul>
       </nav>
 
       <aside aria-labelledby="social-title">
-        <h2 id="social-title">Ми в соцмережах</h2>
+        <h2 class="mb-4 font-['Montserrat','Arial',sans-serif] text-base font-bold" id="social-title">Ми в соцмережах</h2>
 
-        <ul>
+        <ul class="grid gap-2 text-[#4d5151]">
           <li>
-            <a href="https://www.instagram.com/" rel="noreferrer">
+            <a class="hover:text-[#2e8b8b]" href="https://www.instagram.com/" rel="noreferrer">
               Instagram
             </a>
           </li>
           <li>
-            <a href="https://www.facebook.com/" rel="noreferrer">
+            <a class="hover:text-[#2e8b8b]" href="https://www.facebook.com/" rel="noreferrer">
               Facebook
             </a>
           </li>
           <li>
-            <a href="https://www.pinterest.com/" rel="noreferrer">
+            <a class="hover:text-[#2e8b8b]" href="https://www.pinterest.com/" rel="noreferrer">
               Pinterest
             </a>
           </li>
@@ -399,10 +404,10 @@
       </aside>
 
       <section aria-labelledby="legal-title">
-        <h2 id="legal-title">Правова інформація</h2>
-        <p><small>&copy; 2026 Nova Space. Усі права захищені.</small></p>
-        <a href="#privacy">Політика конфіденційності</a>
-        <a href="#terms">Умови використання</a>
+        <h2 class="mb-4 font-['Montserrat','Arial',sans-serif] text-base font-bold" id="legal-title">Правова інформація</h2>
+        <p class="text-[#4d5151]"><small>&copy; 2026 Nova Space. Усі права захищені.</small></p>
+        <a class="mt-2 block text-[#4d5151] hover:text-[#2e8b8b]" href="#privacy">Політика конфіденційності</a>
+        <a class="mt-2 block text-[#4d5151] hover:text-[#2e8b8b]" href="#terms">Умови використання</a>
       </section>
     </footer>
   </body>
