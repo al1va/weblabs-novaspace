@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nova Space — Tailwind navigation blocks</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#2e8b8b',
+              accent: '#e8a13a',
+              secondary: '#b85c72',
+              ink: '#1b1f1f',
+              muted: '#4d5151',
+              brown: '#24201c',
+              black: '#211e1e',
+              gray: '#b3b4b4',
+              paper: '#f2f2f2'
+            },
+            fontFamily: {
+              heading: ['Montserrat', 'Arial', 'sans-serif'],
+              body: ['Inter', 'Segoe UI', 'sans-serif'],
+              mono: ['Roboto Mono', 'Courier New', 'monospace']
+            },
+            boxShadow: {
+              card: '0 1rem 2.5rem rgb(27 31 31 / 10%)'
+            },
+            borderRadius: {
+              sm: '0.35rem',
+              md: '0.75rem',
+              pill: '999px'
+            }
+          }
+        }
+      };
+    </script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Roboto+Mono:wght@400;700&display=swap');
+      html { scroll-behavior: smooth; }
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+      }
+    </style>
+  </head>
+  <body class="bg-paper font-body leading-relaxed text-ink">
+    <!-- ================================================================
+      BLOCK 1 — HEADER
+      Copy from <header> through </header>.
+    ================================================================= -->
+    <header class="mx-auto flex w-[calc(100%-2rem)] max-w-6xl flex-wrap items-center justify-between gap-4 py-4 md:gap-8 lg:min-h-[5.5rem] lg:flex-nowrap">
+      <a
+        href="/"
+        aria-label="Nova Space — на головну"
+        class="flex shrink-0 items-center gap-3 font-heading font-bold text-black transition-colors hover:text-primary focus:outline-none focus:ring-4 focus:ring-accent focus:ring-offset-2"
+      >
+        <span class="grid h-12 w-10 place-items-center rounded-sm bg-primary text-2xl text-white">N</span>
+        <span class="text-lg">Nova Space</span>
+      </a>
+
+      <nav aria-label="Головна навігація" class="order-3 w-full lg:order-none lg:w-auto lg:flex-1">
+        <ul class="flex flex-wrap items-center justify-center gap-4 md:gap-8">
+          <li><a class="transition-colors hover:text-primary focus:outline-none focus:ring-4 focus:ring-accent" href="#about">Про нас</a></li>
+          <li><a class="transition-colors hover:text-primary focus:outline-none focus:ring-4 focus:ring-accent" href="#portfolio">Проєкти</a></li>
+          <li><a class="transition-colors hover:text-primary focus:outline-none focus:ring-4 focus:ring-accent" href="#services">Послуги</a></li>
+          <li><a class="transition-colors hover:text-primary focus:outline-none focus:ring-4 focus:ring-accent" href="#process">Процес</a></li>
+          <li><a class="transition-colors hover:text-primary focus:outline-none focus:ring-4 focus:ring-accent" href="#blog">Блог</a></li>
+        </ul>
+      </nav>
+
+      <a
+        href="#contact"
+        class="w-full rounded-pill bg-primary px-5 py-3 text-center font-bold text-white transition-colors hover:bg-ink focus:outline-none focus:ring-4 focus:ring-accent focus:ring-offset-2 sm:w-auto"
+      >
+        Почати проєкт
+      </a>
+    </header>
+
+    <main class="mx-auto w-[calc(100%-2rem)] max-w-6xl py-12">
+      <!-- ==============================================================
+        BLOCK 2 — CARD NAVIGATION
+        Copy this <nav> block for a card-based navigation section.
+      =============================================================== -->
+      <nav aria-label="Навігація за напрямами">
+        <ul class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <li>
+            <a
+              href="#about"
+              class="group block h-full rounded-md border-2 border-transparent bg-[#ffffff] p-6 text-[#211e1e] shadow-card transition duration-300 hover:-translate-y-1 hover:border-[#1b1f1f] hover:bg-[#2e8b8b] hover:text-[#ffffff] hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-[#e8a13a] focus:ring-offset-2"
+            >
+              <span class="font-mono text-xs font-bold uppercase tracking-widest text-[#2e8b8b] transition-colors group-hover:text-[#ffffff]">01</span>
+              <h2 class="mt-6 font-heading text-2xl font-bold transition-colors group-hover:text-[#ffffff]">Про нас</h2>
+              <p class="mt-3 text-[#4d5151] transition-colors group-hover:text-[#ffffff]">Дізнайтеся більше про бюро та наш підхід.</p>
+              <span class="mt-6 inline-block font-bold text-[#211e1e] underline underline-offset-4 transition-colors group-hover:text-[#ffffff]">Перейти до розділу</span>
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="#portfolio"
+              class="group block h-full rounded-md border-2 border-transparent bg-[#ffffff] p-6 text-[#211e1e] shadow-card transition duration-300 hover:-translate-y-1 hover:border-[#1b1f1f] hover:bg-[#b85c72] hover:text-[#ffffff] hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-[#e8a13a] focus:ring-offset-2"
+            >
+              <span class="font-mono text-xs font-bold uppercase tracking-widest text-[#2e8b8b] transition-colors group-hover:text-[#ffffff]">02</span>
+              <h2 class="mt-6 font-heading text-2xl font-bold transition-colors group-hover:text-[#ffffff]">Проєкти</h2>
+              <p class="mt-3 text-[#4d5151] transition-colors group-hover:text-[#ffffff]">Перегляньте простори, якими ми пишаємося.</p>
+              <span class="mt-6 inline-block font-bold text-[#211e1e] underline underline-offset-4 transition-colors group-hover:text-[#ffffff]">Перейти до розділу</span>
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="#services"
+              class="group block h-full rounded-md border-2 border-transparent bg-white p-6 text-black shadow-card transition duration-300 hover:-translate-y-1 hover:border-black hover:bg-accent hover:!text-[#211e1e] hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-accent focus:ring-offset-2"
+            >
+              <span class="font-mono text-xs font-bold uppercase tracking-widest text-primary transition-colors group-hover:!text-[#211e1e]">03</span>
+              <h2 class="mt-6 font-heading text-2xl font-bold transition-colors group-hover:!text-[#211e1e]">Послуги</h2>
+              <p class="mt-3 text-muted transition-colors group-hover:!text-[#211e1e]">Оберіть рішення для вашого простору.</p>
+              <span class="mt-6 inline-block font-bold text-black underline underline-offset-4 transition-colors group-hover:!text-[#211e1e]">Перейти до розділу</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </main>
+
+    <!-- ================================================================
+      BLOCK 3 — FOOTER
+      Copy from <footer> through </footer>.
+    ================================================================= -->
+    <footer class="bg-white">
+      <div class="mx-auto grid w-[calc(100%-2rem)] max-w-6xl gap-8 py-12 md:grid-cols-2 lg:grid-cols-4">
+        <section>
+          <h2 class="mb-4 font-heading text-base font-bold">Nova Space</h2>
+          <a
+            href="/"
+            class="font-heading font-bold transition-colors hover:text-primary focus:outline-none focus:ring-4 focus:ring-accent focus:ring-offset-2"
+          >
+            NOVA SPACE
+          </a>
+          <p class="mt-4 text-muted">Архітектура, що має значення.</p>
+        </section>
+
+        <nav aria-label="Навігація у футері">
+          <h2 class="mb-4 font-heading text-base font-bold">Навігація</h2>
+          <ul class="grid gap-2 text-muted">
+            <li><a class="transition-colors hover:text-primary focus:outline-none focus:ring-4 focus:ring-accent" href="#about">Про нас</a></li>
+            <li><a class="transition-colors hover:text-primary focus:outline-none focus:ring-4 focus:ring-accent" href="#portfolio">Проєкти</a></li>
+            <li><a class="transition-colors hover:text-primary focus:outline-none focus:ring-4 focus:ring-accent" href="#services">Послуги</a></li>
+            <li><a class="transition-colors hover:text-primary focus:outline-none focus:ring-4 focus:ring-accent" href="#contact">Контакти</a></li>
+          </ul>
+        </nav>
+
+        <aside>
+          <h2 class="mb-4 font-heading text-base font-bold">Ми в соцмережах</h2>
+          <ul class="grid gap-2 text-muted">
+            <li><a class="transition-colors hover:text-primary focus:outline-none focus:ring-4 focus:ring-accent" href="https://www.instagram.com/">Instagram</a></li>
+            <li><a class="transition-colors hover:text-primary focus:outline-none focus:ring-4 focus:ring-accent" href="https://www.facebook.com/">Facebook</a></li>
+            <li><a class="transition-colors hover:text-primary focus:outline-none focus:ring-4 focus:ring-accent" href="https://www.pinterest.com/">Pinterest</a></li>
+          </ul>
+        </aside>
+
+        <section>
+          <h2 class="mb-4 font-heading text-base font-bold">Правова інформація</h2>
+          <p class="text-muted"><small>&copy; 2026 Nova Space. Усі права захищені.</small></p>
+          <a class="mt-2 block text-muted transition-colors hover:text-primary focus:outline-none focus:ring-4 focus:ring-accent" href="#privacy">Політика конфіденційності</a>
+          <a class="mt-2 block text-muted transition-colors hover:text-primary focus:outline-none focus:ring-4 focus:ring-accent" href="#terms">Умови використання</a>
+        </section>
+      </div>
+    </footer>
+  </body>
+</html>
