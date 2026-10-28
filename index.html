@@ -5,35 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Nova Space — портфоліо архітектурного бюро та дизайн просторів.">
     <title>Nova Space — архітектурне бюро</title>
+        <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+
     <script>
-      window.tailwind = window.tailwind || {};
-      window.tailwind.config = {
+
+      tailwind.config = {
+
         theme: {
+
           extend: {
+
             colors: {
+
               primary: '#2e8b8b',
+
               'primary-dark': '#277a7a',
+
               accent: '#e8a13a',
+
               secondary: '#b85c72',
+
               'secondary-dark': '#ad5269',
+
               dark: '#1b1f1f',
+
               muted: '#4d5151',
+
               light: '#f2f2f2',
+
               black: '#211e1e',
+
               brown: '#24201c',
+
               gray: '#b3b4b4',
+
               white: '#fff'
+
             },
+
             fontFamily: {
+
               heading: ['Montserrat', 'Arial', 'sans-serif'],
+
               body: ['Inter', 'Segoe UI', 'sans-serif'],
+
               mono: ['Roboto Mono', 'Courier New', 'monospace']
+
             }
+
           }
+
         }
+
       };
+
     </script>
-    <script src="https://cdn.tailwindcss.com"></script>
+
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:wght@400;500;600;700&family=Roboto+Mono:wght@400;700&display=swap">
