@@ -132,7 +132,7 @@
         <div class="mx-auto max-w-6xl">
           <header>
             <h2 class="font-heading text-2xl font-bold text-white md:text-4xl" id="brands-title">Нам довіряють</h2>
-            <p class="mt-2 text-gray">Працюємо з перевіреними виробниками та підрядниками</p>
+            <p class="mt-2 text-gray"></p>
           </header>
 
           <!-- Список коректно передає групу назв партнерів для скринрідера. -->
@@ -282,6 +282,19 @@
         </ul>
       </section>
 
+      <section class="mx-auto w-[calc(100%-2rem)] max-w-6xl py-16 md:py-24" id="video" aria-labelledby="video-title">
+        <h2 class="mb-10 font-heading text-4xl font-bold leading-tight tracking-tight text-black md:text-6xl" id="video-title">Відеопрезентація бюро</h2>
+        <div class="aspect-video w-full max-w-4xl mx-auto overflow-hidden rounded-md shadow">
+          <iframe
+            class="w-full h-full border-0"
+            src="https://www.youtube-nocookie.com/embed/VIDEO_ID"
+            title="Відеопрезентація архітектурного бюро Nova Space"
+            loading="lazy"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </section>
+
       <section class="mx-auto w-[calc(100%-2rem)] max-w-6xl py-16 md:py-24" id="process" aria-labelledby="process-title">
         <header class="mb-10 flex flex-col items-start gap-3">
           <p class="font-mono text-xs font-bold uppercase tracking-widest text-primary-dark">Як ми працюємо</p>
@@ -308,12 +321,9 @@
         </ol>
 
         <aside class="mt-16 max-w-2xl rounded-md bg-brown p-6 md:p-12" aria-labelledby="calculator-title">
-          <div class="flex items-center gap-4">
-            <img class="h-12 w-12" src="assets/icons/calc.svg" alt="" aria-hidden="true">
-            <h3 class="font-heading text-2xl font-bold text-white" id="calculator-title">Розрахувати орієнтовну вартість</h3>
-          </div>
+          <h3 class="font-heading text-2xl font-bold text-white" id="calculator-title">Розрахувати орієнтовну вартість</h3>
 
-          <form class="mt-6" id="calculator-form" action="#" method="get">
+          <form class="mt-6" action="#" method="get">
             <fieldset class="grid gap-4 md:grid-cols-2">
               <legend class="mb-2 font-bold text-white md:col-span-2">Параметри проєкту</legend>
 
@@ -334,19 +344,7 @@
                   name="project-area"
                   type="number"
                   min="1"
-                  step="1"
                   inputmode="numeric"
-                  required
-                >
-                <input
-                  class="mt-3 w-full accent-accent focus:outline-none focus:ring-4 focus:ring-accent"
-                  id="project-area-slider"
-                  type="range"
-                  min="1"
-                  max="1000"
-                  value="1"
-                  step="1"
-                  aria-label="Площа проєкту, м²"
                 >
               </p>
             </fieldset>
@@ -441,87 +439,21 @@
       </section>
 
       <section class="w-full max-w-none bg-primary-dark px-4 py-16 text-white md:px-8 md:py-24" id="contact" aria-labelledby="contact-title">
-        <div class="mx-auto grid max-w-6xl gap-12 lg:grid-cols-2 lg:gap-16">
-          <article>
-            <p class="mb-3 font-mono text-xs font-bold uppercase tracking-widest">Готові почати?</p>
-            <h2 class="max-w-xl font-heading text-4xl font-bold leading-tight text-white md:text-6xl" id="contact-title">Розкажіть нам про свій проєкт</h2>
+        <article class="mx-auto max-w-6xl">
+          <p class="mb-3 font-mono text-xs font-bold uppercase tracking-widest">Готові почати?</p>
+          <h2 class="max-w-xl font-heading text-4xl font-bold leading-tight text-white md:text-6xl" id="contact-title">Розкажіть нам про свій проєкт</h2>
 
-            <address class="mt-8 flex flex-wrap gap-4 not-italic md:gap-8">
-              <a class="text-lg font-bold underline underline-offset-4 hover:text-dark focus:outline-none focus:ring-4 focus:ring-accent focus:ring-offset-2 focus:ring-offset-primary-dark" href="mailto:hello@novaspace.example">
-                hello@novaspace.example
-              </a>
-              <a class="text-lg font-bold underline underline-offset-4 hover:text-dark focus:outline-none focus:ring-4 focus:ring-accent focus:ring-offset-2 focus:ring-offset-primary-dark" href="tel:+380000000000">
-                +38 (000) 000-00-00
-              </a>
-            </address>
-          </article>
-
-          <form class="grid gap-4" action="#contact" method="post">
-            <div>
-              <label class="mb-1 block font-bold text-white" for="contact-name">Ім'я</label>
-              <input class="min-h-11 w-full rounded-sm border border-gray bg-white px-3 text-dark focus:outline-none focus:ring-4 focus:ring-accent" id="contact-name" name="name" type="text" autocomplete="name" required>
-            </div>
-
-            <div>
-              <label class="mb-1 block font-bold text-white" for="contact-email">Email</label>
-              <input class="min-h-11 w-full rounded-sm border border-gray bg-white px-3 text-dark focus:outline-none focus:ring-4 focus:ring-accent" id="contact-email" name="email" type="email" autocomplete="email" required>
-            </div>
-
-            <div>
-              <label class="mb-1 block font-bold text-white" for="contact-phone">Телефон</label>
-              <input class="min-h-11 w-full rounded-sm border border-gray bg-white px-3 text-dark focus:outline-none focus:ring-4 focus:ring-accent" id="contact-phone" name="phone" type="tel" autocomplete="tel">
-            </div>
-
-            <div>
-              <label class="mb-1 block font-bold text-white" for="contact-message">Коротке повідомлення</label>
-              <textarea class="min-h-32 w-full rounded-sm border border-gray bg-white px-3 py-2 text-dark focus:outline-none focus:ring-4 focus:ring-accent" id="contact-message" name="message" rows="4" required></textarea>
-            </div>
-
-            <button class="w-fit rounded-full bg-accent px-5 py-3 font-bold text-dark transition-colors hover:bg-white focus:outline-none focus:ring-4 focus:ring-accent focus:ring-offset-2 focus:ring-offset-primary-dark" type="submit">Обговорити проєкт</button>
-          </form>
-        </div>
+          <address class="mt-8 flex flex-wrap gap-4 not-italic md:gap-8">
+            <a class="text-lg font-bold underline underline-offset-4 hover:text-dark" href="mailto:hello@novaspace.example">
+              hello@novaspace.example
+            </a>
+            <a class="text-lg font-bold underline underline-offset-4 hover:text-dark" href="tel:+380000000000">
+              +38 (000) 000-00-00
+            </a>
+          </address>
+        </article>
       </section>
     </main>
-
-    <script>
-      const calculatorForm = document.querySelector('#calculator-form');
-      const projectType = document.querySelector('#project-type');
-      const projectArea = document.querySelector('#project-area');
-      const projectAreaSlider = document.querySelector('#project-area-slider');
-      const estimatedPrice = document.querySelector('[name="estimated-price"]');
-      const rates = {
-        interior: 1200,
-        architecture: 1800,
-        commercial: 1500
-      };
-
-      projectAreaSlider.addEventListener('input', () => {
-        projectArea.value = projectAreaSlider.value;
-      });
-
-      projectArea.addEventListener('input', () => {
-        const area = Number(projectArea.value);
-        if (area > 0 && area <= 1000) {
-          projectAreaSlider.value = area;
-        }
-      });
-
-      calculatorForm.addEventListener('submit', (event) => {
-        event.preventDefault();
-        const area = Number(projectArea.value);
-
-        if (!Number.isFinite(area) || area <= 0) {
-          projectArea.setCustomValidity('Вкажіть площу понад 0 м².');
-          projectArea.reportValidity();
-          estimatedPrice.textContent = 'Вкажіть площу понад 0 м².';
-          return;
-        }
-
-        projectArea.setCustomValidity('');
-        const total = area * rates[projectType.value];
-        estimatedPrice.textContent = `Орієнтовна вартість: ${total.toLocaleString('uk-UA')} грн.`;
-      });
-    </script>
 
     <footer class="mx-auto grid w-[calc(100%-2rem)] max-w-6xl gap-8 py-12 md:grid-cols-2 lg:grid-cols-4">
       <section aria-label="Nova Space">
