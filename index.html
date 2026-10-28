@@ -439,19 +439,59 @@
       </section>
 
       <section class="w-full max-w-none bg-primary-dark px-4 py-16 text-white md:px-8 md:py-24" id="contact" aria-labelledby="contact-title">
-        <article class="mx-auto max-w-6xl">
-          <p class="mb-3 font-mono text-xs font-bold uppercase tracking-widest">Готові почати?</p>
-          <h2 class="max-w-xl font-heading text-4xl font-bold leading-tight text-white md:text-6xl" id="contact-title">Розкажіть нам про свій проєкт</h2>
+        <div class="mx-auto grid max-w-6xl gap-12 lg:grid-cols-2 lg:gap-16">
+          <article>
+            <p class="mb-3 font-mono text-xs font-bold uppercase tracking-widest">Готові почати?</p>
+            <h2 class="max-w-xl font-heading text-4xl font-bold leading-tight text-white md:text-6xl" id="contact-title">Розкажіть нам про свій проєкт</h2>
 
-          <address class="mt-8 flex flex-wrap gap-4 not-italic md:gap-8">
-            <a class="text-lg font-bold underline underline-offset-4 hover:text-dark" href="mailto:hello@novaspace.example">
-              hello@novaspace.example
-            </a>
-            <a class="text-lg font-bold underline underline-offset-4 hover:text-dark" href="tel:+380000000000">
-              +38 (000) 000-00-00
-            </a>
-          </address>
-        </article>
+            <address class="mt-8 flex flex-wrap gap-4 not-italic md:gap-8">
+              <a class="text-lg font-bold underline underline-offset-4 hover:text-dark" href="mailto:hello@novaspace.example">
+                hello@novaspace.example
+              </a>
+              <a class="text-lg font-bold underline underline-offset-4 hover:text-dark" href="tel:+380000000000">
+                +38 (000) 000-00-00
+              </a>
+            </address>
+
+            <form class="mt-8 grid gap-4" action="#contact" method="post">
+              <div>
+                <label class="mb-1 block font-bold text-white" for="contact-name">Ім'я</label>
+                <input class="min-h-11 w-full rounded-sm border border-gray bg-white px-3 text-dark focus:outline-none focus:ring-4 focus:ring-accent" id="contact-name" name="name" type="text" autocomplete="name" required>
+              </div>
+
+              <div>
+                <label class="mb-1 block font-bold text-white" for="contact-email">Email</label>
+                <input class="min-h-11 w-full rounded-sm border border-gray bg-white px-3 text-dark focus:outline-none focus:ring-4 focus:ring-accent" id="contact-email" name="email" type="email" autocomplete="email" required>
+              </div>
+
+              <div>
+                <label class="mb-1 block font-bold text-white" for="contact-phone">Телефон</label>
+                <input class="min-h-11 w-full rounded-sm border border-gray bg-white px-3 text-dark focus:outline-none focus:ring-4 focus:ring-accent" id="contact-phone" name="phone" type="tel" autocomplete="tel">
+              </div>
+
+              <div>
+                <label class="mb-1 block font-bold text-white" for="contact-message">Коротке повідомлення</label>
+                <textarea class="min-h-32 w-full rounded-sm border border-gray bg-white px-3 py-2 text-dark focus:outline-none focus:ring-4 focus:ring-accent" id="contact-message" name="message" rows="4" required></textarea>
+              </div>
+
+              <button class="w-fit rounded-full bg-accent px-5 py-3 font-bold text-dark transition-colors hover:bg-white focus:outline-none focus:ring-4 focus:ring-accent focus:ring-offset-2 focus:ring-offset-primary-dark" type="submit">Обговорити проєкт</button>
+            </form>
+          </article>
+
+          <section aria-labelledby="location-title">
+            <h3 class="mb-4 font-heading text-2xl font-bold text-white" id="location-title">Де нас знайти</h3>
+            <div class="aspect-video w-full overflow-hidden rounded-md">
+              <iframe
+                class="h-full w-full border-0"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1034.6144919465019!2d24.013626678233052!3d49.835534413690745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1suk!2sua!4v1793177014442!5m2!1suk!2sua"
+                title="Карта розташування Nova Space"
+                loading="lazy"
+                allowfullscreen
+                referrerpolicy="strict-origin-when-cross-origin"
+              ></iframe>
+            </div>
+          </section>
+        </div>
       </section>
     </main>
 
