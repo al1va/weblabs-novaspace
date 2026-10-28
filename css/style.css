@@ -1,8 +1,10 @@
 :root {
   /* Brand and surface colors. */
   --color-primary: #2e8b8b;
+  --color-primary-accessible: #277a7a;
   --color-accent: #e8a13a;
   --color-secondary: #b85c72;
+  --color-secondary-accessible: #ad5269;
   --color-dark: #1b1f1f;
   --color-dark-muted: #4d5151;
   --color-brown: #24201c;
@@ -46,7 +48,7 @@
 #process > ol li::before {
   display: block;
   margin-bottom: var(--space-8);
-  color: var(--color-primary);
+  color: var(--color-primary-accessible);
   content: "0" counter(process);
   font-family: var(--font-mono);
   font-weight: 700;
