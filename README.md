@@ -1,17 +1,18 @@
 # Nova Space
 
-Навчальний проект на тему "Архітектурне бюро «Новий Простір» («Nova Space»)". Є сайтом-лендингом для бізнесу "Nova Space"
+Навчальний проєкт з дисципліни «Технології веб-розробки та дизайну» на тему "Архітектурне бюро «Новий Простір» («Nova Space»)". Сайт-лендинг для бізнесу "Nova Space"
 
 ## Посилання
 
 - Netlify: https://lab6-lopashchenko.netlify.app/
+- GitHub Pages: https://al1va.github.io/weblabs-novaspace/
 
 ## Технології
 
 - HTML5
 - CSS, Tailwind CSS
 - Git, Github
-- Netlify
+- GitHub Pages, Netlify (деплой)
 
 ## Структура
 
