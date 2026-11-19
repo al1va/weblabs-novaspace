@@ -13,12 +13,12 @@
   --color-gray: #b3b4b4;
   --color-white: #fff;
 
-  /* Typography. */
+
   --font-heading: "Montserrat", "Arial", sans-serif;
   --font-body: "Inter", "Segoe UI", sans-serif;
   --font-mono: "Roboto Mono", "Courier New", monospace;
 
-  /* Layout and spacing tokens. */
+
   --content-width: 72rem;
   --section-space: clamp(4rem, 8vw, 8rem);
   --header-height: 5.5rem;
@@ -54,8 +54,8 @@
   font-weight: 700;
 }
 
-/* Форма зворотного зв'язку: плавна зміна рамок при валідації. */
 #feedbackForm :is(input, textarea) {
+  border-width: 2px;
   transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
