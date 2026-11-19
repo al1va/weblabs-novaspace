@@ -53,3 +53,13 @@
   font-family: var(--font-mono);
   font-weight: 700;
 }
+
+/* Форма зворотного зв'язку: плавна зміна рамок при валідації. */
+#feedbackForm :is(input, textarea) {
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+:focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: 2px;
+}
