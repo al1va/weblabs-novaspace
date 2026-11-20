@@ -6,6 +6,7 @@
 
 - Netlify: https://lab6-lopashchenko.netlify.app/
 - GitHub Pages: https://al1va.github.io/weblabs-novaspace/
+- Vercel: https://weblabs-novaspace.vercel.app/
 
 ## Технології
 
