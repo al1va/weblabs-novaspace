@@ -13,12 +13,12 @@
   --color-gray: #b3b4b4;
   --color-white: #fff;
 
-  /* Typography. */
+
   --font-heading: "Montserrat", "Arial", sans-serif;
   --font-body: "Inter", "Segoe UI", sans-serif;
   --font-mono: "Roboto Mono", "Courier New", monospace;
 
-  /* Layout and spacing tokens. */
+
   --content-width: 72rem;
   --section-space: clamp(4rem, 8vw, 8rem);
   --header-height: 5.5rem;
@@ -52,4 +52,14 @@
   content: "0" counter(process);
   font-family: var(--font-mono);
   font-weight: 700;
+}
+
+#feedbackForm :is(input, textarea) {
+  border-width: 2px;
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+:focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: 2px;
 }

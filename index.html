@@ -454,28 +454,42 @@
               </a>
             </address>
 
-            <form class="mt-8 grid gap-4" action="#contact" method="post">
-              <div>
+            <form id="feedbackForm" novalidate class="mt-8 grid gap-4 sm:grid-cols-1 md:grid-cols-2 md:gap-6">
+              <div class="col-span-1 md:col-span-1">
                 <label class="mb-1 block font-bold text-white" for="contact-name">Ім'я</label>
-                <input class="min-h-11 w-full rounded-sm border border-gray bg-white px-3 text-dark focus:outline-none focus:ring-4 focus:ring-accent" id="contact-name" name="name" type="text" autocomplete="name" required>
+                <input class="min-h-11 w-full rounded-sm border border-gray bg-white px-3 text-dark focus:outline-none focus:ring-4 focus:ring-accent transition-colors" id="contact-name" name="name" type="text" autocomplete="name" minlength="2" required aria-describedby="nameError" aria-invalid="false">
+                <p id="nameError" class="hidden mt-1 rounded-sm bg-white px-2 py-1 text-sm text-red-600" role="alert"></p>
               </div>
 
-              <div>
+              <div class="col-span-1 md:col-span-1">
                 <label class="mb-1 block font-bold text-white" for="contact-email">Email</label>
-                <input class="min-h-11 w-full rounded-sm border border-gray bg-white px-3 text-dark focus:outline-none focus:ring-4 focus:ring-accent" id="contact-email" name="email" type="email" autocomplete="email" required>
+                <input class="min-h-11 w-full rounded-sm border border-gray bg-white px-3 text-dark focus:outline-none focus:ring-4 focus:ring-accent transition-colors" id="contact-email" name="email" type="email" autocomplete="email" required aria-describedby="emailError" aria-invalid="false">
+                <p id="emailError" class="hidden mt-1 rounded-sm bg-white px-2 py-1 text-sm text-red-600" role="alert"></p>
               </div>
 
-              <div>
+              <div class="col-span-1 md:col-span-1">
                 <label class="mb-1 block font-bold text-white" for="contact-phone">Телефон</label>
-                <input class="min-h-11 w-full rounded-sm border border-gray bg-white px-3 text-dark focus:outline-none focus:ring-4 focus:ring-accent" id="contact-phone" name="phone" type="tel" autocomplete="tel">
+                <input class="min-h-11 w-full rounded-sm border border-gray bg-white px-3 text-dark focus:outline-none focus:ring-4 focus:ring-accent transition-colors" id="contact-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" maxlength="13" placeholder="+380501234567" required aria-describedby="phoneError" aria-invalid="false">
+                <p id="phoneError" class="hidden mt-1 rounded-sm bg-white px-2 py-1 text-sm text-red-600" role="alert"></p>
               </div>
 
-              <div>
+              <div class="col-span-2 md:col-span-2">
                 <label class="mb-1 block font-bold text-white" for="contact-message">Коротке повідомлення</label>
-                <textarea class="min-h-32 w-full rounded-sm border border-gray bg-white px-3 py-2 text-dark focus:outline-none focus:ring-4 focus:ring-accent" id="contact-message" name="message" rows="4" required></textarea>
+                <textarea class="min-h-32 w-full rounded-sm border border-gray bg-white px-3 py-2 text-dark focus:outline-none focus:ring-4 focus:ring-accent transition-colors" id="contact-message" name="message" rows="4" minlength="10" required aria-describedby="messageError" aria-invalid="false"></textarea>
+                <p id="messageError" class="hidden mt-1 rounded-sm bg-white px-2 py-1 text-sm text-red-600" role="alert"></p>
               </div>
 
-              <button class="w-fit rounded-full bg-accent px-5 py-3 font-bold text-dark transition-colors hover:bg-white focus:outline-none focus:ring-4 focus:ring-accent focus:ring-offset-2 focus:ring-offset-primary-dark" type="submit">Обговорити проєкт</button>
+              <div class="col-span-2 md:col-span-2 flex items-start gap-2">
+                <input class="mt-0.5 h-4 w-4 rounded border-gray text-accent focus:ring-accent" id="agreement" name="agreement" type="checkbox" aria-describedby="agreementError" aria-invalid="false">
+                <label class="text-sm text-white leading-relaxed" for="agreement">
+                  Я даю згоду на обробку персональних даних <a class="text-accent hover:text-white underline underline-offset-2" href="#privacy">Політика конфіденційності</a>
+                </label>
+                <p id="agreementError" class="hidden mt-1 rounded-sm bg-white px-2 py-1 text-sm text-red-600" role="alert"></p>
+              </div>
+
+              <div class="col-span-2 md:col-span-2">
+                <button id="feedbackSubmit" class="w-full min-h-11 rounded-full bg-accent px-5 py-3 font-bold text-dark transition-colors hover:bg-white focus:outline-none focus:ring-4 focus:ring-accent focus:ring-offset-2 focus:ring-offset-primary-dark" type="submit">Обговорити проєкт</button>
+              </div>
             </form>
           </article>
 
@@ -560,5 +574,13 @@
         <a class="mt-2 block text-muted hover:text-primary-dark" href="#terms">Умови використання</a>
       </section>
     </footer>
+  <div id="successModal" class="hidden fixed inset-0 z-50 items-center justify-center bg-black/60" role="dialog" aria-modal="true" aria-labelledby="successModalTitle" aria-describedby="successModalDescription" tabindex="-1">
+    <div class="bg-white w-full max-w-md rounded-md p-6 text-dark shadow-lg text-center m-4" id="successModalCard">
+      <h2 id="successModalTitle" class="font-heading text-xl font-bold mb-2">Успіх</h2>
+      <p id="successModalDescription" class="mb-6">Форма успішно пройшла клієнтську валідацію. Демонстрація успішного надсилання.</p>
+      <button id="closeModalBtn" class="w-full min-h-11 rounded-full bg-accent px-5 py-3 font-bold text-dark transition-colors hover:bg-white focus:outline-none focus:ring-4 focus:ring-accent">Закрити</button>
+    </div>
+  </div>
+  <script src="js/validation.js" defer></script>
   </body>
 </html>
