@@ -63,3 +63,29 @@
   outline: var(--focus-ring);
   outline-offset: 2px;
 }
+
+/* Допоміжний клас для приховування вмісту від зору, але доступного скринрідерам. */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Відступи для каруселі відгуків, щоб пагінація і стрілки не накладалися на слайди. */
+.reviews-swiper {
+  padding-bottom: 3rem;
+}
+
+.reviews-swiper .swiper-slide {
+  height: auto;
+}
+
+.reviews-swiper .swiper-slide > figure {
+  height: 100%;
+}
