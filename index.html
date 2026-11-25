@@ -65,6 +65,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:wght@400;500;600;700&family=Roboto+Mono:wght@400;700&display=swap">
+
+    <!-- Стилі Swiper v11 та Fancybox v5 через jsDelivr CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="bg-light font-body leading-relaxed text-dark">
@@ -94,6 +98,7 @@
           <li><a class="transition-colors hover:text-primary-dark focus:outline-none focus:ring-4 focus:ring-accent" href="#about">Про нас</a></li>
           <li><a class="transition-colors hover:text-primary-dark focus:outline-none focus:ring-4 focus:ring-accent" href="#portfolio">Проєкти</a></li>
           <li><a class="transition-colors hover:text-primary-dark focus:outline-none focus:ring-4 focus:ring-accent" href="#services">Послуги</a></li>
+          <li><a class="transition-colors hover:text-primary-dark focus:outline-none focus:ring-4 focus:ring-accent" href="#gallery">Галерея</a></li>
           <li><a class="transition-colors hover:text-primary-dark focus:outline-none focus:ring-4 focus:ring-accent" href="#process">Процес</a></li>
           <li><a class="transition-colors hover:text-primary-dark focus:outline-none focus:ring-4 focus:ring-accent" href="#blog">Блог</a></li>
         </ul>
@@ -108,9 +113,11 @@
       <section class="mx-auto grid w-[calc(100%-2rem)] max-w-6xl items-center gap-8 py-16 text-center md:py-24 lg:grid-cols-2 lg:gap-12 lg:py-32 lg:text-left" aria-labelledby="hero-title">
         <article class="flex flex-col items-center lg:items-start">
           <h1 class="font-heading text-5xl font-bold leading-none tracking-tight text-black md:text-7xl lg:text-8xl" id="hero-title">Простір, у якому хочеться жити</h1>
+          <!-- Контейнер для Typed.js: три слогани з ефектом друку -->
           <p class="mt-6 max-w-xl text-lg text-muted md:text-xl">
-            Створюємо продумані інтер'єри та архітектуру, що відображають
-            характер людей і брендів.
+            <span id="typed-slogans" aria-hidden="true"></span>
+            <!-- Текст для скринрідерів, щоб слогани були доступні без JS -->
+            <span class="sr-only">Створюємо продумані інтер'єри та архітектуру, що відображають характер людей і брендів.</span>
           </p>
 
           <nav class="mt-8 flex flex-wrap justify-center gap-4 lg:justify-start" aria-label="Дії у вступному блоці">
@@ -365,24 +372,135 @@
           <h2 class="font-heading text-4xl font-bold leading-tight tracking-tight text-black md:text-6xl" id="reviews-title">Відгуки клієнтів</h2>
         </header>
 
-        <ul class="grid grid-cols-1 gap-6 md:grid-cols-3">
+        <!-- Карусель відгуків на Swiper v11: 6 слайдів, loop, autoplay 3500 мс, pauseOnMouseEnter -->
+        <div class="swiper reviews-swiper">
+          <ul class="swiper-wrapper">
+            <li class="swiper-slide">
+              <figure class="flex h-full flex-col rounded-md bg-white p-6 shadow-[0_1rem_2.5rem_rgb(27_31_31_/_10%)]">
+                <!-- 5 зірок оцінки -->
+                <div class="mb-4 flex gap-1 text-accent" aria-label="Оцінка 5 з 5">
+                  <span aria-hidden="true">★</span><span aria-hidden="true">★</span><span aria-hidden="true">★</span><span aria-hidden="true">★</span><span aria-hidden="true">★</span>
+                </div>
+                <blockquote class="flex-1 text-muted">Команда перетворила темну квартиру на світлий житловий інтер'єр із продуманим зберіганням і затишною кухнею для всієї родини.</blockquote>
+                <figcaption class="mt-6 flex items-center gap-3">
+                  <img class="h-12 w-12 rounded-full object-cover" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=96&h=96&fit=crop&crop=faces" alt="" loading="lazy">
+                  <span class="font-bold text-dark">Марія Коваль — житловий інтер'єр</span>
+                </figcaption>
+              </figure>
+            </li>
+
+            <li class="swiper-slide">
+              <figure class="flex h-full flex-col rounded-md bg-white p-6 shadow-[0_1rem_2.5rem_rgb(27_31_31_/_10%)]">
+                <div class="mb-4 flex gap-1 text-accent" aria-label="Оцінка 5 з 5">
+                  <span aria-hidden="true">★</span><span aria-hidden="true">★</span><span aria-hidden="true">★</span><span aria-hidden="true">★</span><span aria-hidden="true">★</span>
+                </div>
+                <blockquote class="flex-1 text-muted">Після оновлення офісу команди отримали зручні робочі зони, окремі місця для зустрічей і простір, який підтримує спільну роботу.</blockquote>
+                <figcaption class="mt-6 flex items-center gap-3">
+                  <img class="h-12 w-12 rounded-full object-cover" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=96&h=96&fit=crop&crop=faces" alt="" loading="lazy">
+                  <span class="font-bold text-dark">Олег Рудан — офісний простір</span>
+                </figcaption>
+              </figure>
+            </li>
+
+            <li class="swiper-slide">
+              <figure class="flex h-full flex-col rounded-md bg-white p-6 shadow-[0_1rem_2.5rem_rgb(27_31_31_/_10%)]">
+                <div class="mb-4 flex gap-1 text-accent" aria-label="Оцінка 5 з 5">
+                  <span aria-hidden="true">★</span><span aria-hidden="true">★</span><span aria-hidden="true">★</span><span aria-hidden="true">★</span><span aria-hidden="true">★</span>
+                </div>
+                <blockquote class="flex-1 text-muted">Реконструкція зберегла характер старого будинку, але додала сучасну інженерію, теплі матеріали та зручне планування на кожному поверсі.</blockquote>
+                <figcaption class="mt-6 flex items-center gap-3">
+                  <img class="h-12 w-12 rounded-full object-cover" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=96&h=96&fit=crop&crop=faces" alt="" loading="lazy">
+                  <span class="font-bold text-dark">Ірина Левченко — реконструкція будинку</span>
+                </figcaption>
+              </figure>
+            </li>
+
+            <li class="swiper-slide">
+              <figure class="flex h-full flex-col rounded-md bg-white p-6 shadow-[0_1rem_2.5rem_rgb(27_31_31_/_10%)]">
+                <div class="mb-4 flex gap-1 text-accent" aria-label="Оцінка 5 з 5">
+                  <span aria-hidden="true">★</span><span aria-hidden="true">★</span><span aria-hidden="true">★</span><span aria-hidden="true">★</span><span aria-hidden="true">★</span>
+                </div>
+                <blockquote class="flex-1 text-muted">Ландшафтна композиція вдало продовжила архітектуру будинку — тераса і сад стали єдиним простором для відпочинку родини.</blockquote>
+                <figcaption class="mt-6 flex items-center gap-3">
+                  <img class="h-12 w-12 rounded-full object-cover" src="https://images.unsplash.com/photo-1507003211169-0cff1aa7b24f?w=96&h=96&fit=crop&crop=faces" alt="" loading="lazy">
+                  <span class="font-bold text-dark">Андрій Швець — ландшафтний дизайн</span>
+                </figcaption>
+              </figure>
+            </li>
+
+            <li class="swiper-slide">
+              <figure class="flex h-full flex-col rounded-md bg-white p-6 shadow-[0_1rem_2.5rem_rgb(27_31_31_/_10%)]">
+                <div class="mb-4 flex gap-1 text-accent" aria-label="Оцінка 5 з 5">
+                  <span aria-hidden="true">★</span><span aria-hidden="true">★</span><span aria-hidden="true">★</span><span aria-hidden="true">★</span><span aria-hidden="true">★</span>
+                </div>
+                <blockquote class="flex-1 text-muted">Комерційний простір став впізнаваним і зручним водночас: клієнти помічають бренд, а команді комфортно працювати щодня.</blockquote>
+                <figcaption class="mt-6 flex items-center gap-3">
+                  <img class="h-12 w-12 rounded-full object-cover" src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=96&h=96&fit=crop&crop=faces" alt="" loading="lazy">
+                  <span class="font-bold text-dark">Софія Гнатюк — комерційний простір</span>
+                </figcaption>
+              </figure>
+            </li>
+
+            <li class="swiper-slide">
+              <figure class="flex h-full flex-col rounded-md bg-white p-6 shadow-[0_1rem_2.5rem_rgb(27_31_31_/_10%)]">
+                <div class="mb-4 flex gap-1 text-accent" aria-label="Оцінка 5 з 5">
+                  <span aria-hidden="true">★</span><span aria-hidden="true">★</span><span aria-hidden="true">★</span><span aria-hidden="true">★</span><span aria-hidden="true">★</span>
+                </div>
+                <blockquote class="flex-1 text-muted">Комплектація проєкту пройшла без зайвих турбот — матеріали, меблі та освітлення підібрані під єдину концепцію простору.</blockquote>
+                <figcaption class="mt-6 flex items-center gap-3">
+                  <img class="h-12 w-12 rounded-full object-cover" src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=96&h=96&fit=crop&crop=faces" alt="" loading="lazy">
+                  <span class="font-bold text-dark">Денис Ткаченко — комплектація проєкту</span>
+                </figcaption>
+              </figure>
+            </li>
+          </ul>
+
+          <!-- Клікабельна пагінація -->
+          <div class="swiper-pagination !bottom-0" aria-label="Пагінація відгуків"></div>
+          <!-- Стрілки навігації -->
+          <button class="swiper-button-prev !text-primary-dark" aria-label="Попередній відгук"></button>
+          <button class="swiper-button-next !text-primary-dark" aria-label="Наступний відгук"></button>
+        </div>
+      </section>
+
+      <section class="mx-auto w-[calc(100%-2rem)] max-w-6xl py-16 md:py-24" id="gallery" aria-labelledby="gallery-title">
+        <header class="mb-10 flex flex-col items-start gap-3">
+          <p class="font-mono text-xs font-bold uppercase tracking-widest text-primary-dark">Галерея</p>
+          <h2 class="font-heading text-4xl font-bold leading-tight tracking-tight text-black md:text-6xl" id="gallery-title">Вибрані роботи в деталях</h2>
+          <p class="max-w-2xl text-muted">Натисніть на зображення, щоб переглянути його в повному розмірі із підписом і зумом.</p>
+        </header>
+
+        <!-- Галерея на Fancybox v5: один альбом, перехід fade, зум до 3x -->
+        <ul class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           <li>
-            <figure class="h-full rounded-md bg-white p-6 shadow-[0_1rem_2.5rem_rgb(27_31_31_/_10%)]">
-              <blockquote class="text-muted">Команда перетворила темну квартиру на світлий житловий інтер'єр із продуманим зберіганням і затишною кухнею для всієї родини.</blockquote>
-              <figcaption class="mt-6 font-bold text-dark">Марія Коваль — житловий інтер'єр</figcaption>
-            </figure>
+            <a href="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&h=1200&fit=crop" data-fancybox="gallery" data-caption="Сучасна вітальня з природним освітленням">
+              <img class="h-64 w-full cursor-zoom-in rounded-md object-cover transition duration-300 hover:opacity-90" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=400&fit=crop" alt="Сучасна вітальня з природним освітленням" loading="lazy">
+            </a>
           </li>
           <li>
-            <figure class="h-full rounded-md bg-white p-6 shadow-[0_1rem_2.5rem_rgb(27_31_31_/_10%)]">
-              <blockquote class="text-muted">Після оновлення офісу команди отримали зручні робочі зони, окремі місця для зустрічей і простір, який підтримує спільну роботу.</blockquote>
-              <figcaption class="mt-6 font-bold text-dark">Олег Рудан — офісний простір</figcaption>
-            </figure>
+            <a href="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1600&h=1200&fit=crop" data-fancybox="gallery" data-caption="Мінімалістична кухня з дерев'яними акцентами">
+              <img class="h-64 w-full cursor-zoom-in rounded-md object-cover transition duration-300 hover:opacity-90" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&h=400&fit=crop" alt="Мінімалістична кухня з дерев'яними акцентами" loading="lazy">
+            </a>
           </li>
           <li>
-            <figure class="h-full rounded-md bg-white p-6 shadow-[0_1rem_2.5rem_rgb(27_31_31_/_10%)]">
-              <blockquote class="text-muted">Реконструкція зберегла характер старого будинку, але додала сучасну інженерію, теплі матеріали та зручне планування на кожному поверсі.</blockquote>
-              <figcaption class="mt-6 font-bold text-dark">Ірина Левченко — реконструкція будинку</figcaption>
-            </figure>
+            <a href="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=1600&h=1200&fit=crop" data-fancybox="gallery" data-caption="Спальня в нейтральних тонах із теплою підсвіткою">
+              <img class="h-64 w-full cursor-zoom-in rounded-md object-cover transition duration-300 hover:opacity-90" src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=600&h=400&fit=crop" alt="Спальня в нейтральних тонах" loading="lazy">
+            </a>
+          </li>
+          <li>
+            <a href="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1600&h=1200&fit=crop" data-fancybox="gallery" data-caption="Офісне приміщення з відкритим плануванням">
+              <img class="h-64 w-full cursor-zoom-in rounded-md object-cover transition duration-300 hover:opacity-90" src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=600&h=400&fit=crop" alt="Офісне приміщення з відкритим плануванням" loading="lazy">
+            </a>
+          </li>
+          <li>
+            <a href="https://images.unsplash.com/photo-1600573472550-8090b5e0745e?w=1600&h=1200&fit=crop" data-fancybox="gallery" data-caption="Архітектурний фасад із бетоном і склом">
+              <img class="h-64 w-full cursor-zoom-in rounded-md object-cover transition duration-300 hover:opacity-90" src="https://images.unsplash.com/photo-1600573472550-8090b5e0745e?w=600&h=400&fit=crop" alt="Архітектурний фасад із бетоном і склом" loading="lazy">
+            </a>
+          </li>
+          <li>
+            <a href="https://images.unsplash.com/photo-1600121848594-d8644e57abab?w=1600&h=1200&fit=crop" data-fancybox="gallery" data-caption="Ландшафт двору з терасою та зеленню">
+              <img class="h-64 w-full cursor-zoom-in rounded-md object-cover transition duration-300 hover:opacity-90" src="https://images.unsplash.com/photo-1600121848594-d8644e57abab?w=600&h=400&fit=crop" alt="Ландшафт двору з терасою та зеленню" loading="lazy">
+            </a>
           </li>
         </ul>
       </section>
@@ -540,6 +658,7 @@
           <li><a class="hover:text-primary-dark" href="#about">Про нас</a></li>
           <li><a class="hover:text-primary-dark" href="#portfolio">Проєкти</a></li>
           <li><a class="hover:text-primary-dark" href="#services">Послуги</a></li>
+          <li><a class="hover:text-primary-dark" href="#gallery">Галерея</a></li>
           <li><a class="hover:text-primary-dark" href="#blog">Блог</a></li>
           <li><a class="hover:text-primary-dark" href="#contact">Контакти</a></li>
         </ul>
@@ -582,5 +701,75 @@
     </div>
   </div>
   <script src="js/validation.js" defer></script>
+
+  <!-- Бібліотеки через jsDelivr CDN: Typed.js 2.0.12, Swiper v11, Fancybox v5 -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/dist/typed.umd.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+  <script>
+    // Ініціалізація всіх інтерактивних елементів після завантаження DOM.
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1) Hero-секція: ефект друку Typed.js — 3 слогани, loop.
+      if (window.Typed && document.getElementById('typed-slogans')) {
+        new Typed('#typed-slogans', {
+          strings: [
+            'Створюємо продумані інтер\'єри та архітектуру.',
+            'Простори, що відображають характер людей і брендів.',
+            'Від ідеї до готового простору — з нами.'
+          ],
+          typeSpeed: 50,
+          backSpeed: 30,
+          loop: true
+        });
+      }
+
+      // 2) Карусель відгуків Swiper v11 — autoplay 3500 мс, pauseOnMouseEnter, breakpoints.
+      if (window.Swiper && document.querySelector('.reviews-swiper')) {
+        new Swiper('.reviews-swiper', {
+          loop: true,
+          slidesPerView: 1,
+          spaceBetween: 24,
+          autoplay: {
+            delay: 3500,
+            pauseOnMouseEnter: true
+          },
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev'
+          },
+          // Точки переривання: 320 → 1 слайд, 768 → 2, 1024 → 3.
+          breakpoints: {
+            320: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 }
+          }
+        });
+      }
+
+      // 3) Галерея Fancybox v5 — перехід fade, зум до 3x.
+      if (window.Fancybox) {
+        Fancybox.bind('[data-fancybox="gallery"]', {
+          animated: true,
+          showClass: 'fancybox-fade',
+          hideClass: 'fancybox-fade',
+          // Увімкнення зуму з максимальним коефіцієнтом збільшення 3x.
+          zoom: true,
+          zoomOpacity: true,
+          Hash: false,
+          Toolbar: {
+            display: { left: [], middle: [], right: ['zoomIn', 'zoomOut', 'toggle1to1', 'close'] }
+          },
+          Images: {
+            zoom: true,
+            maxScale: 3
+          }
+        });
+      }
+    });
+  </script>
   </body>
 </html>
